@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heckenservice.de | Ihr Profi für Zäune & Garten</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --brand-green: #2d7a3a;
+            --brand-dark: #333333;
+        }
+        .bg-brand-green { background-color: var(--brand-green); }
+        .text-brand-green { color: var(--brand-green); }
+        .btn-hover:hover { filter: brightness(1.1); transition: 0.3s; }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50">
+
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="bg-brand-green p-2 rounded">
+                    <i class="fas fa-fence text-white"></i>
+                </div>
+                <span class="text-xl font-bold tracking-tight">Heckenservice<span class="text-brand-green">.de</span></span>
+            </div>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#services" class="hover:text-brand-green font-medium">Leistungen</a>
+                <a href="#process" class="hover:text-brand-green font-medium">Ablauf</a>
+                <a href="tel:+4916097471549" class="flex items-center text-brand-green font-bold">
+                    <i class="fas fa-phone-alt mr-2"></i> +49 160 97471549
+                </a>
+            </div>
+            <a href="#kontakt" class="bg-brand-green text-white px-6 py-2 rounded-full font-bold btn-hover">Anfrage senden</a>
+        </div>
+    </header>
+
+    <section class="relative bg-white py-16 lg:py-24 overflow-hidden">
+        <div class="container mx-auto px-4 flex flex-col lg:flex-row items-center">
+            <div class="lg:w-1/2 z-10">
+                <span class="inline-block bg-green-100 text-brand-green px-4 py-1 rounded-full text-sm font-bold mb-4">
+                    Kostenloses Aufmaß & Beratung
+                </span>
+                <h1 class="text-4xl lg:text-6xl font-extrabold text-gray-900 mb-6 leading-tight">
+                    Neuer Zaun für Ihr <br><span class="text-brand-green">Eigenheim?</span>
+                </h1>
+                <p class="text-xl text-gray-600 mb-8 max-w-lg">
+                    Wir kommen direkt zu Ihnen! Stressfrei, maßgeschneidert und fachgerecht montiert. Erhalten Sie jetzt Ihr unverbindliches Angebot.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#kontakt" class="bg-brand-green text-white text-center px-8 py-4 rounded-lg text-lg font-bold shadow-lg btn-hover">
+                        Jetzt Gratis-Angebot sichern
+                    </a>
+                    <a href="tel:+4916097471549" class="border-2 border-brand-green text-brand-green text-center px-8 py-4 rounded-lg text-lg font-bold hover:bg-green-50">
+                        <i class="fas fa-phone-alt mr-2"></i> Anrufen
+                    </a>
+                </div>
+                <div class="mt-8 flex items-center space-x-4 text-sm text-gray-500">
+                    <span class="flex items-center"><i class="fas fa-check text-brand-green mr-2"></i> 100% Festpreisgarantie</span>
+                    <span class="flex items-center"><i class="fas fa-check text-brand-green mr-2"></i> Regionale Experten</span>
+                </div>
+            </div>
+            <div class="lg:w-1/2 mt-12 lg:mt-0 relative">
+                <div class="rounded-2xl shadow-2xl border-8 border-white overflow-hidden">
+                    <img src="../zaun/img/fence_clean.png" alt="Moderner Zaunbau" class="w-full h-auto">
+                </div>
+                <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl hidden md:block">
+                    <div class="flex items-center space-x-4">
+                        <div class="bg-yellow-400 p-3 rounded-full">
+                            <i class="fas fa-star text-white"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold">Top Bewertung</p>
+                            <p class="text-xs text-gray-500">Zufriedene Kunden in Ihrer Region</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 text-center mb-16">
+            <h2 class="text-3xl font-bold mb-4">Warum Heckenservice.de?</h2>
+            <div class="w-20 h-1 bg-brand-green mx-auto"></div>
+        </div>
+        <div class="container mx-auto px-4 grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-xl shadow-sm text-center">
+                <i class="fas fa-ruler-combined text-4xl text-brand-green mb-6"></i>
+                <h3 class="text-xl font-bold mb-4">Kostenloses Aufmaß</h3>
+                <p class="text-gray-600">Wir messen präzise vor Ort aus, damit am Ende alles perfekt passt.</p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-sm text-center">
+                <i class="fas fa-comments text-4xl text-brand-green mb-6"></i>
+                <h3 class="text-xl font-bold mb-4">Individuelle Beratung</h3>
+                <p class="text-gray-600">Ob Sichtschutz, Doppelstabmatte oder Design-Zaun – wir beraten Sie ehrlich.</p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-sm text-center">
+                <i class="fas fa-handshake text-4xl text-brand-green mb-6"></i>
+                <h3 class="text-xl font-bold mb-4">Unverbindliches Angebot</h3>
+                <p class="text-gray-600">Sie erhalten ein transparentes Angebot ohne versteckte Kosten.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto bg-brand-green rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row">
+                <div class="md:w-1/2 p-10 text-white">
+                    <h2 class="text-3xl font-bold mb-6">Jetzt Termin vereinbaren</h2>
+                    <p class="mb-8 opacity-90">Hinterlassen Sie uns Ihre Kontaktdaten. Wir melden uns innerhalb von 24 Stunden bei Ihnen für eine Terminabsprache.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-phone mr-4"></i>
+                            <span>+49 160 97471549</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope mr-4"></i>
+                            <span>kontakt@heckenservice.de</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 bg-white p-10">
+                    <form id="contact-form" action="https://formspree.io/f/mjgedpdo" method="POST" class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Name *</label>
+                            <input type="text" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-green outline-none" placeholder="Ihr Name">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Telefonnummer *</label>
+                            <input type="tel" name="telefon" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-green outline-none" placeholder="0151 12345678">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Postleitzahl *</label>
+                            <input type="text" name="postleitzahl" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-green outline-none" placeholder="12345">
+                        </div>
+                        <button type="submit" id="submit-btn" class="w-full bg-brand-green text-white py-3 rounded-lg font-bold text-lg shadow-md btn-hover mt-4">
+                            Kostenlose Anfrage senden
+                        </button>
+                        <div id="form-success" class="hidden bg-green-50 border border-green-300 text-green-800 rounded-lg p-4 text-center">
+                            <i class="fas fa-check-circle mr-2"></i> Vielen Dank! Wir melden uns bald bei Ihnen.
+                        </div>
+                        <div id="form-error" class="hidden bg-red-50 border border-red-300 text-red-800 rounded-lg p-4 text-center">
+                            <i class="fas fa-exclamation-circle mr-2"></i> Fehler beim Senden. Bitte versuchen Sie es erneut.
+                        </div>
+                        <p class="text-[10px] text-gray-400 mt-2 text-center">
+                            Mit Absenden des Formulars akzeptieren Sie unsere Datenschutzerklärung.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="container mx-auto px-4 text-center">
+            <div class="mb-8">
+                <span class="text-2xl font-bold text-white">Heckenservice<span class="text-brand-green">.de</span></span>
+            </div>
+            <div class="flex flex-wrap justify-center space-x-6 mb-8">
+                <a href="impressum.html" class="hover:text-white">Impressum</a>
+                <a href="#" class="hover:text-white">Datenschutz</a>
+                <a href="#" class="hover:text-white">AGB</a>
+            </div>
+            <p>&copy; 2026 Heckenservice. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script>
+        const form = document.getElementById('contact-form');
+        const submitBtn = document.getElementById('submit-btn');
+        const successMsg = document.getElementById('form-success');
+        const errorMsg = document.getElementById('form-error');
+
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Wird gesendet...';
+
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (response.ok) {
+                    form.reset();
+                    submitBtn.classList.add('hidden');
+                    successMsg.classList.remove('hidden');
+                } else {
+                    throw new Error();
+                }
+            } catch {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Kostenlose Anfrage senden';
+                errorMsg.classList.remove('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
