@@ -3,7 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heckenservice.de | Ihr Profi für Zäune & Garten</title>
+    <title>Zaunbau & Montage in Köln, NRW | Kostenlos Aufmaß | Zaunservice-NRW</title>
+
+    <!-- SEO Meta -->
+    <meta name="description" content="Professioneller Zaunbau & Zaunmontage in Köln, Düsseldorf, Bonn & ganz NRW. ✓ Kostenloses Aufmaß ✓ Festpreisgarantie ✓ Komplettmontage aus einer Hand. Jetzt Gratis-Angebot anfordern!">
+    <meta name="keywords" content="Zaunbau NRW, Zaunmontage Köln, Zaun Düsseldorf, Zaunbauer NRW, Sichtschutzzaun NRW, Doppelstabmattenzaun Köln, Zaun montieren Nordrhein-Westfalen, Zaunbau Bonn, Zaunbau Leverkusen, Zaunbau Bergisch Gladbach">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Zaunservice-NRW">
+    <link rel="canonical" href="https://zaunservice-nrw.de/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:title" content="Zaunbau & Montage in Köln & ganz NRW | Zaunservice-NRW">
+    <meta property="og:description" content="Professioneller Zaunbau in ganz NRW — kostenloses Aufmaß, Festpreisgarantie, Komplettmontage. Jetzt kostenlos anfragen!">
+    <meta property="og:url" content="https://zaunservice-nrw.de/">
+    <meta property="og:site_name" content="Zaunservice-NRW">
+    <meta property="og:image" content="https://zaunservice-nrw.de/img/fence_clean.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Zaunbau & Montage in Köln & ganz NRW | Zaunservice-NRW">
+    <meta name="twitter:description" content="Professioneller Zaunbau in NRW — kostenloses Aufmaß, Festpreisgarantie, Komplettmontage.">
+    <meta name="twitter:image" content="https://zaunservice-nrw.de/img/fence_clean.png">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -13,67 +36,138 @@
         }
         .bg-brand-green { background-color: var(--brand-green); }
         .text-brand-green { color: var(--brand-green); }
+        .border-brand-green { border-color: var(--brand-green); }
         .btn-hover:hover { filter: brightness(1.1); transition: 0.3s; }
+        .ring-brand-green:focus { --tw-ring-color: var(--brand-green); }
+
+        /* Пульсирующая анимация для кнопки телефона */
+        @keyframes pulse-green {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(45,122,58,0.5); }
+            50% { box-shadow: 0 0 0 10px rgba(45,122,58,0); }
+        }
+        .pulse { animation: pulse-green 2s infinite; }
+
+        /* Галерея */
+        .gallery-img { transition: transform 0.3s; }
+        .gallery-img:hover { transform: scale(1.03); }
+
+        /* WhatsApp кнопка */
+        .whatsapp-fab {
+            position: fixed;
+            bottom: 100px;
+            right: 24px;
+            z-index: 10000;
+            background: #25D366;
+            color: white;
+            border-radius: 50%;
+            width: 64px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: 0 4px 24px rgba(37,211,102,0.6);
+            transition: transform 0.2s;
+            text-decoration: none;
+        }
+        .whatsapp-fab:hover { transform: scale(1.12); }
+        @media (min-width: 768px) { .whatsapp-fab { bottom: 120px; } }
+
+        /* Exit Intent Overlay */
+        #exit-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.65);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+        #exit-overlay.active { display: flex; }
+
+        /* Cookie Banner */
+        #cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 9998;
+            background: #1f2937;
+            color: white;
+            padding: 1rem 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 1rem;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.3);
+        }
+        #cookie-banner.hidden { display: none; }
     </style>
 </head>
-<body class="font-sans text-gray-800 bg-gray-50">
+<body class="font-sans text-gray-800 bg-white">
 
+    <!-- HEADER -->
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center space-x-2">
                 <div class="bg-brand-green p-2 rounded">
                     <i class="fas fa-fence text-white"></i>
                 </div>
-                <span class="text-xl font-bold tracking-tight">Heckenservice<span class="text-brand-green">.de</span></span>
+                <span class="text-xl font-bold tracking-tight">Zaunservice<span class="text-brand-green">-NRW</span></span>
             </div>
             <div class="hidden md:flex items-center space-x-6">
-                <a href="#services" class="hover:text-brand-green font-medium">Leistungen</a>
-                <a href="#process" class="hover:text-brand-green font-medium">Ablauf</a>
-                <a href="tel:+4916097471549" class="flex items-center text-brand-green font-bold">
-                    <i class="fas fa-phone-alt mr-2"></i> +49 160 97471549
+                <a href="#leistungen" class="hover:text-brand-green font-medium">Leistungen</a>
+                <a href="#galerie" class="hover:text-brand-green font-medium">Galerie</a>
+                <a href="#ablauf" class="hover:text-brand-green font-medium">Ablauf</a>
+                <a href="#faq" class="hover:text-brand-green font-medium">FAQ</a>
+                <a href="tel:+4915753326213" class="flex items-center text-brand-green font-bold pulse bg-green-50 px-4 py-2 rounded-full">
+                    <i class="fas fa-phone-alt mr-2"></i> +49 1575 3326 213
                 </a>
             </div>
-            <a href="#kontakt" class="bg-brand-green text-white px-6 py-2 rounded-full font-bold btn-hover">Anfrage senden</a>
+            <a href="#kontakt" class="bg-brand-green text-white px-6 py-2 rounded-full font-bold btn-hover">Gratis Angebot</a>
         </div>
     </header>
 
+    <!-- HERO -->
     <section class="relative bg-white py-16 lg:py-24 overflow-hidden">
-        <div class="container mx-auto px-4 flex flex-col lg:flex-row items-center">
+        <div class="container mx-auto px-4 flex flex-col lg:flex-row items-center gap-12">
             <div class="lg:w-1/2 z-10">
                 <span class="inline-block bg-green-100 text-brand-green px-4 py-1 rounded-full text-sm font-bold mb-4">
-                    Kostenloses Aufmaß & Beratung
+                    <i class="fas fa-map-marker-alt mr-1"></i> Ihr regionaler Zaunprofi in NRW
                 </span>
                 <h1 class="text-4xl lg:text-6xl font-extrabold text-gray-900 mb-6 leading-tight">
-                    Neuer Zaun für Ihr <br><span class="text-brand-green">Eigenheim?</span>
+                    Neuer Zaun in <span class="text-brand-green">Köln, Düsseldorf</span> & ganz NRW?
                 </h1>
                 <p class="text-xl text-gray-600 mb-8 max-w-lg">
-                    Wir kommen direkt zu Ihnen! Stressfrei, maßgeschneidert und fachgerecht montiert. Erhalten Sie jetzt Ihr unverbindliches Angebot.
+                    Professionelle Zaunmontage direkt bei Ihnen vor Ort — stressfrei, zum Festpreis, mit kostenlosem Aufmaß. Wir sind in ganz Nordrhein-Westfalen für Sie da.
                 </p>
-                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                <div class="flex flex-col sm:flex-row gap-4 mb-8">
                     <a href="#kontakt" class="bg-brand-green text-white text-center px-8 py-4 rounded-lg text-lg font-bold shadow-lg btn-hover">
-                        Jetzt Gratis-Angebot sichern
+                        <i class="fas fa-clipboard-list mr-2"></i> Jetzt Gratis-Angebot sichern
                     </a>
-                    <a href="tel:+4916097471549" class="border-2 border-brand-green text-brand-green text-center px-8 py-4 rounded-lg text-lg font-bold hover:bg-green-50">
-                        <i class="fas fa-phone-alt mr-2"></i> Anrufen
+                    <a href="tel:+4915753326213" class="border-2 border-brand-green text-brand-green text-center px-8 py-4 rounded-lg text-lg font-bold hover:bg-green-50">
+                        <i class="fas fa-phone-alt mr-2"></i> Direkt anrufen
                     </a>
                 </div>
-                <div class="mt-8 flex items-center space-x-4 text-sm text-gray-500">
-                    <span class="flex items-center"><i class="fas fa-check text-brand-green mr-2"></i> 100% Festpreisgarantie</span>
-                    <span class="flex items-center"><i class="fas fa-check text-brand-green mr-2"></i> Regionale Experten</span>
+                <div class="flex flex-wrap gap-4 text-sm text-gray-600">
+                    <span class="flex items-center"><i class="fas fa-check-circle text-brand-green mr-2"></i> 100% Festpreisgarantie</span>
+                    <span class="flex items-center"><i class="fas fa-check-circle text-brand-green mr-2"></i> Kostenloser Vor-Ort-Termin</span>
+                    <span class="flex items-center"><i class="fas fa-check-circle text-brand-green mr-2"></i> Antwort innerhalb 24h</span>
                 </div>
             </div>
-            <div class="lg:w-1/2 mt-12 lg:mt-0 relative">
+            <div class="lg:w-1/2 relative">
                 <div class="rounded-2xl shadow-2xl border-8 border-white overflow-hidden">
-                    <img src="../zaun/img/fence_clean.png" alt="Moderner Zaunbau" class="w-full h-auto">
+                    <img src="img/fence_clean.png" alt="Professioneller Zaunbau in NRW" class="w-full h-auto">
                 </div>
-                <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl hidden md:block">
-                    <div class="flex items-center space-x-4">
+                <div class="absolute -bottom-4 -left-4 bg-white p-5 rounded-xl shadow-xl hidden md:block">
+                    <div class="flex items-center space-x-3">
                         <div class="bg-yellow-400 p-3 rounded-full">
-                            <i class="fas fa-star text-white"></i>
+                            <i class="fas fa-star text-white text-lg"></i>
                         </div>
                         <div>
-                            <p class="text-sm font-bold">Top Bewertung</p>
-                            <p class="text-xs text-gray-500">Zufriedene Kunden in Ihrer Region</p>
+                            <p class="font-bold text-gray-900">⭐⭐⭐⭐⭐</p>
+                            <p class="text-xs text-gray-500">Über 80 zufriedene Kunden in NRW</p>
                         </div>
                     </div>
                 </div>
@@ -81,72 +175,375 @@
         </div>
     </section>
 
-    <section id="services" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-4 text-center mb-16">
-            <h2 class="text-3xl font-bold mb-4">Warum Heckenservice.de?</h2>
-            <div class="w-20 h-1 bg-brand-green mx-auto"></div>
-        </div>
-        <div class="container mx-auto px-4 grid md:grid-cols-3 gap-8">
-            <div class="bg-white p-8 rounded-xl shadow-sm text-center">
-                <i class="fas fa-ruler-combined text-4xl text-brand-green mb-6"></i>
-                <h3 class="text-xl font-bold mb-4">Kostenloses Aufmaß</h3>
-                <p class="text-gray-600">Wir messen präzise vor Ort aus, damit am Ende alles perfekt passt.</p>
-            </div>
-            <div class="bg-white p-8 rounded-xl shadow-sm text-center">
-                <i class="fas fa-comments text-4xl text-brand-green mb-6"></i>
-                <h3 class="text-xl font-bold mb-4">Individuelle Beratung</h3>
-                <p class="text-gray-600">Ob Sichtschutz, Doppelstabmatte oder Design-Zaun – wir beraten Sie ehrlich.</p>
-            </div>
-            <div class="bg-white p-8 rounded-xl shadow-sm text-center">
-                <i class="fas fa-handshake text-4xl text-brand-green mb-6"></i>
-                <h3 class="text-xl font-bold mb-4">Unverbindliches Angebot</h3>
-                <p class="text-gray-600">Sie erhalten ein transparentes Angebot ohne versteckte Kosten.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="kontakt" class="py-20 bg-white">
+    <!-- VERTRAUENS-LEISTE -->
+    <section class="bg-gray-900 py-10">
         <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto bg-brand-green rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row">
-                <div class="md:w-1/2 p-10 text-white">
-                    <h2 class="text-3xl font-bold mb-6">Jetzt Termin vereinbaren</h2>
-                    <p class="mb-8 opacity-90">Hinterlassen Sie uns Ihre Kontaktdaten. Wir melden uns innerhalb von 24 Stunden bei Ihnen für eine Terminabsprache.</p>
-                    <div class="space-y-4">
-                        <div class="flex items-center">
-                            <i class="fas fa-phone mr-4"></i>
-                            <span>+49 160 97471549</span>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-white">
+                <div>
+                    <p class="text-3xl font-extrabold text-brand-green">80+</p>
+                    <p class="text-sm text-gray-400 mt-1">Projekte in NRW</p>
+                </div>
+                <div>
+                    <p class="text-3xl font-extrabold text-brand-green">24h</p>
+                    <p class="text-sm text-gray-400 mt-1">Reaktionszeit</p>
+                </div>
+                <div>
+                    <p class="text-3xl font-extrabold text-brand-green">0 €</p>
+                    <p class="text-sm text-gray-400 mt-1">Kostenloser Kostenvoranschlag</p>
+                </div>
+                <div>
+                    <p class="text-3xl font-extrabold text-brand-green">100%</p>
+                    <p class="text-sm text-gray-400 mt-1">Festpreisgarantie</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LEISTUNGEN -->
+    <section id="leistungen" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-14">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4">Unsere Leistungen in NRW</h2>
+                <p class="text-gray-500 max-w-xl mx-auto">Von Köln bis Düsseldorf, von Bonn bis Dortmund — wir montieren Ihren Wunschzaun überall in Nordrhein-Westfalen.</p>
+                <div class="w-20 h-1 bg-brand-green mx-auto mt-4"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-sm text-center hover:shadow-md transition-shadow">
+                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-border-all text-3xl text-brand-green"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Doppelstabmatten-Zaun</h3>
+                    <p class="text-gray-600 text-sm">Stabil, preiswert und pflegeleicht — ideal für Grundstücke in ganz NRW. Inkl. Pfosten und Montage.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-sm text-center hover:shadow-md transition-shadow">
+                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-eye-slash text-3xl text-brand-green"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Sichtschutzzaun</h3>
+                    <p class="text-gray-600 text-sm">100% Privatsphäre im eigenen Garten. Verschiedene Materialien und Höhen — wir beraten Sie ehrlich.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-sm text-center hover:shadow-md transition-shadow">
+                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-drafting-compass text-3xl text-brand-green"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Design- & Schmuckzaun</h3>
+                    <p class="text-gray-600 text-sm">Hochwertige Zäune, die Ihr Haus aufwerten. Maßgefertigt für Ihr Grundstück in der Region Köln/Bonn.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-sm text-center hover:shadow-md transition-shadow">
+                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-ruler-combined text-3xl text-brand-green"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Kostenloses Aufmaß</h3>
+                    <p class="text-gray-600 text-sm">Wir kommen persönlich zu Ihnen — egal ob Köln, Leverkusen oder Rhein-Erft-Kreis. Aufmaß & Beratung gratis.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-sm text-center hover:shadow-md transition-shadow">
+                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-tools text-3xl text-brand-green"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Komplettmontage</h3>
+                    <p class="text-gray-600 text-sm">Lieferung, Erdarbeiten, Montage — alles aus einer Hand. Sie müssen sich um nichts kümmern.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-sm text-center hover:shadow-md transition-shadow">
+                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-door-open text-3xl text-brand-green"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Tore & Türen</h3>
+                    <p class="text-gray-600 text-sm">Einfahrtstore, Gartentüren und Pfortenanlagen — passend zu Ihrem Zaun, professionell eingebaut.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERIE -->
+    <section id="galerie" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-14">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4">Unsere Projekte in NRW</h2>
+                <p class="text-gray-500 max-w-xl mx-auto">Echte Zäune, echte Kunden — hier sehen Sie unsere fertigen Arbeiten aus der Region.</p>
+                <div class="w-20 h-1 bg-brand-green mx-auto mt-4"></div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="col-span-2 row-span-2 overflow-hidden rounded-2xl shadow-md gallery-img">
+                    <img src="img/fence_clean.png" alt="Zaunmontage NRW" class="w-full h-full object-cover">
+                </div>
+                <div class="overflow-hidden rounded-2xl shadow-md gallery-img">
+                    <img src="img/photo_2026-03-01_21-34-52.jpg" alt="Zaunbau Köln" class="w-full h-full object-cover">
+                </div>
+                <div class="overflow-hidden rounded-2xl shadow-md gallery-img">
+                    <img src="img/photo_2026-03-01_21-35-05.jpg" alt="Sichtschutzzaun NRW" class="w-full h-full object-cover">
+                </div>
+                <div class="overflow-hidden rounded-2xl shadow-md gallery-img">
+                    <img src="img/zaun-bau.png" alt="Zaunmontage Düsseldorf" class="w-full h-full object-cover">
+                </div>
+                <div class="overflow-hidden rounded-2xl shadow-md gallery-img bg-brand-green flex items-center justify-center p-6">
+                    <div class="text-center text-white">
+                        <p class="text-4xl font-extrabold">80+</p>
+                        <p class="text-sm mt-2 opacity-90">Fertige Projekte<br>in NRW</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABLAUF -->
+    <section id="ablauf" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-14">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4">So einfach funktioniert's</h2>
+                <p class="text-gray-500 max-w-xl mx-auto">Von der Anfrage bis zum fertigen Zaun — stressfrei und transparent.</p>
+                <div class="w-20 h-1 bg-brand-green mx-auto mt-4"></div>
+            </div>
+            <div class="grid md:grid-cols-4 gap-8 relative">
+                <div class="hidden md:block absolute top-10 left-1/4 right-1/4 h-0.5 bg-green-200 z-0"></div>
+                <div class="text-center relative z-10">
+                    <div class="bg-brand-green w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <span class="text-white font-extrabold text-xl">1</span>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Anfrage senden</h3>
+                    <p class="text-gray-600 text-sm">Formular ausfüllen oder anrufen — dauert unter 1 Minute.</p>
+                </div>
+                <div class="text-center relative z-10">
+                    <div class="bg-brand-green w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <span class="text-white font-extrabold text-xl">2</span>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Kostenloser Termin</h3>
+                    <p class="text-gray-600 text-sm">Wir kommen zu Ihnen, messen auf und beraten Sie vor Ort in NRW.</p>
+                </div>
+                <div class="text-center relative z-10">
+                    <div class="bg-brand-green w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <span class="text-white font-extrabold text-xl">3</span>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Festpreisangebot</h3>
+                    <p class="text-gray-600 text-sm">Sie erhalten ein transparentes Angebot ohne versteckte Kosten.</p>
+                </div>
+                <div class="text-center relative z-10">
+                    <div class="bg-brand-green w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <span class="text-white font-extrabold text-xl">4</span>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Montage & Fertig</h3>
+                    <p class="text-gray-600 text-sm">Unser Team montiert Ihren neuen Zaun schnell und sauber.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICEGEBIET NRW -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <span class="inline-block bg-green-100 text-brand-green px-4 py-1 rounded-full text-sm font-bold mb-4">
+                        <i class="fas fa-map-marker-alt mr-1"></i> Servicegebiet
+                    </span>
+                    <h2 class="text-3xl lg:text-4xl font-bold mb-6">Wir sind in ganz <span class="text-brand-green">NRW</span> für Sie da</h2>
+                    <p class="text-gray-600 mb-8">Als lokaler Betrieb aus Köln bedienen wir alle Städte und Gemeinden in Nordrhein-Westfalen. Kurze Wege, schnelle Reaktionszeiten, persönlicher Service.</p>
+                    <div class="grid grid-cols-2 gap-3 mb-8">
+                        <div class="flex items-center text-gray-700"><i class="fas fa-check text-brand-green mr-2"></i> Köln</div>
+                        <div class="flex items-center text-gray-700"><i class="fas fa-check text-brand-green mr-2"></i> Düsseldorf</div>
+                        <div class="flex items-center text-gray-700"><i class="fas fa-check text-brand-green mr-2"></i> Bonn</div>
+                        <div class="flex items-center text-gray-700"><i class="fas fa-check text-brand-green mr-2"></i> Leverkusen</div>
+                        <div class="flex items-center text-gray-700"><i class="fas fa-check text-brand-green mr-2"></i> Bergisch Gladbach</div>
+                        <div class="flex items-center text-gray-700"><i class="fas fa-check text-brand-green mr-2"></i> Rhein-Erft-Kreis</div>
+                        <div class="flex items-center text-gray-700"><i class="fas fa-check text-brand-green mr-2"></i> Rheinisch-Bergischer Kreis</div>
+                        <div class="flex items-center text-gray-700"><i class="fas fa-check text-brand-green mr-2"></i> & weitere Städte in NRW</div>
+                    </div>
+                    <a href="#kontakt" class="bg-brand-green text-white px-8 py-4 rounded-lg font-bold btn-hover inline-block">
+                        Jetzt Anfrage für Ihre Stadt senden
+                    </a>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="bg-gray-50 rounded-2xl p-8 shadow-sm">
+                        <img src="img/zaun-bau.png" alt="Zaunmontage in NRW" class="w-full h-auto rounded-xl shadow">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BEWERTUNGEN -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-14">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4">Das sagen unsere Kunden in NRW</h2>
+                <div class="w-20 h-1 bg-brand-green mx-auto mt-4"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <div class="text-yellow-400 text-xl mb-4">⭐⭐⭐⭐⭐</div>
+                    <p class="text-gray-700 italic mb-6">"Sehr schnelle und saubere Arbeit! Der Zaun sieht perfekt aus. Haben in Köln-Porz innerhalb von 2 Tagen nach Anfrage einen Termin bekommen."</p>
+                    <div class="flex items-center">
+                        <div class="bg-green-100 w-10 h-10 rounded-full flex items-center justify-center mr-3">
+                            <span class="font-bold text-brand-green">M</span>
                         </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-envelope mr-4"></i>
-                            <span>kontakt@heckenservice.de</span>
+                        <div>
+                            <p class="font-bold text-sm">Michael S.</p>
+                            <p class="text-xs text-gray-500">Köln-Porz</p>
                         </div>
                     </div>
                 </div>
-                <div class="md:w-1/2 bg-white p-10">
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <div class="text-yellow-400 text-xl mb-4">⭐⭐⭐⭐⭐</div>
+                    <p class="text-gray-700 italic mb-6">"Festpreis eingehalten, keine bösen Überraschungen. Das Team war pünktlich und hat alles aufgeräumt hinterlassen. Klare Empfehlung für den Rheinisch-Bergischen Kreis!"</p>
+                    <div class="flex items-center">
+                        <div class="bg-green-100 w-10 h-10 rounded-full flex items-center justify-center mr-3">
+                            <span class="font-bold text-brand-green">S</span>
+                        </div>
+                        <div>
+                            <p class="font-bold text-sm">Sandra K.</p>
+                            <p class="text-xs text-gray-500">Bergisch Gladbach</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <div class="text-yellow-400 text-xl mb-4">⭐⭐⭐⭐⭐</div>
+                    <p class="text-gray-700 italic mb-6">"Endlich ein Betrieb, der sich in NRW auskennt! Aufmaß war gratis, das Angebot kam noch am gleichen Tag. Sehr zu empfehlen!"</p>
+                    <div class="flex items-center">
+                        <div class="bg-green-100 w-10 h-10 rounded-full flex items-center justify-center mr-3">
+                            <span class="font-bold text-brand-green">T</span>
+                        </div>
+                        <div>
+                            <p class="font-bold text-sm">Thomas W.</p>
+                            <p class="text-xs text-gray-500">Leverkusen</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-20 bg-white">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <div class="text-center mb-14">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4">Häufige Fragen</h2>
+                <div class="w-20 h-1 bg-brand-green mx-auto mt-4"></div>
+            </div>
+            <div class="space-y-4">
+                <details class="bg-gray-50 rounded-xl p-6 group" open>
+                    <summary class="font-bold text-lg cursor-pointer flex justify-between items-center list-none">
+                        Ist das Aufmaß wirklich kostenlos?
+                        <i class="fas fa-chevron-down text-brand-green group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="text-gray-600 mt-4 text-sm">Ja, absolut. Wir kommen zu Ihnen nach Hause, messen das Grundstück aus und beraten Sie — komplett kostenlos und unverbindlich. Das gilt für alle Städte in NRW.</p>
+                </details>
+                <details class="bg-gray-50 rounded-xl p-6 group">
+                    <summary class="font-bold text-lg cursor-pointer flex justify-between items-center list-none">
+                        Wie schnell kann ein Termin vereinbart werden?
+                        <i class="fas fa-chevron-down text-brand-green group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="text-gray-600 mt-4 text-sm">Wir melden uns innerhalb von 24 Stunden nach Ihrer Anfrage. Termine sind in der Regel innerhalb weniger Tage möglich — je nach Region in NRW.</p>
+                </details>
+                <details class="bg-gray-50 rounded-xl p-6 group">
+                    <summary class="font-bold text-lg cursor-pointer flex justify-between items-center list-none">
+                        Was bedeutet Festpreisgarantie?
+                        <i class="fas fa-chevron-down text-brand-green group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="text-gray-600 mt-4 text-sm">Der im Angebot genannte Preis ist verbindlich — keine versteckten Kosten, keine Nachforderungen. Was wir vereinbaren, das zahlen Sie.</p>
+                </details>
+                <details class="bg-gray-50 rounded-xl p-6 group">
+                    <summary class="font-bold text-lg cursor-pointer flex justify-between items-center list-none">
+                        In welchen Städten arbeiten Sie?
+                        <i class="fas fa-chevron-down text-brand-green group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="text-gray-600 mt-4 text-sm">Wir sind im gesamten Nordrhein-Westfalen tätig — schwerpunktmäßig Köln, Bonn, Leverkusen, Düsseldorf, Bergisch Gladbach, Rhein-Erft-Kreis und Rheinisch-Bergischer Kreis. Einfach anfragen — wir sagen Ihnen sofort, ob wir zu Ihnen kommen können.</p>
+                </details>
+                <details class="bg-gray-50 rounded-xl p-6 group">
+                    <summary class="font-bold text-lg cursor-pointer flex justify-between items-center list-none">
+                        Welche Zauntypen montieren Sie?
+                        <i class="fas fa-chevron-down text-brand-green group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="text-gray-600 mt-4 text-sm">Doppelstabmatten, Sichtschutzzäune, Design- und Schmuckzäune sowie Tore und Gartentüren. Wir beraten Sie bei der Auswahl des richtigen Zauns für Ihr Grundstück.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- KONTAKT / CTA -->
+    <section id="kontakt" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4">Jetzt kostenloses Angebot anfordern</h2>
+                <p class="text-gray-500">Für alle Städte in Nordrhein-Westfalen — Antwort garantiert innerhalb 24h</p>
+            </div>
+            <div class="max-w-4xl mx-auto bg-white rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row">
+                <div class="md:w-1/2 p-10 text-white" style="background-color: var(--brand-green);">
+                    <h3 class="text-2xl font-bold mb-4">Ihr Zaunprofi in NRW</h3>
+                    <p class="mb-8 opacity-90 text-sm">Hinterlassen Sie uns Ihre Daten — wir melden uns innerhalb von 24 Stunden für einen kostenlosen Vor-Ort-Termin.</p>
+                    <div class="space-y-5">
+                        <a href="tel:+4915753326213" class="flex items-center hover:opacity-80 transition-opacity">
+                            <div class="bg-white bg-opacity-20 w-10 h-10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs opacity-75">Direkt anrufen</p>
+                                <p class="font-bold">+49 1575 3326 213</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center">
+                            <div class="bg-white bg-opacity-20 w-10 h-10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs opacity-75">E-Mail</p>
+                                <p class="font-bold">kontakt@heckenservice.de</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-white bg-opacity-20 w-10 h-10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs opacity-75">Erreichbar</p>
+                                <p class="font-bold">Mo–So, 07:00–20:00 Uhr</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-white bg-opacity-20 w-10 h-10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs opacity-75">Servicegebiet</p>
+                                <p class="font-bold">Ganz NRW</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 p-10">
                     <form id="contact-form" action="https://formspree.io/f/mjgedpdo" method="POST" class="space-y-4">
                         <div>
                             <label class="block text-sm font-medium text-gray-700 mb-1">Name *</label>
-                            <input type="text" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-green outline-none" placeholder="Ihr Name">
+                            <input type="text" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-green outline-none" placeholder="Ihr vollständiger Name">
                         </div>
                         <div>
                             <label class="block text-sm font-medium text-gray-700 mb-1">Telefonnummer *</label>
-                            <input type="tel" name="telefon" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-green outline-none" placeholder="0151 12345678">
+                            <input type="tel" name="telefon" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-green outline-none" placeholder="0151 12345678">
                         </div>
                         <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">Postleitzahl *</label>
-                            <input type="text" name="postleitzahl" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-green outline-none" placeholder="12345">
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Stadt / Postleitzahl *</label>
+                            <input type="text" name="stadt_plz" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-green outline-none" placeholder="z.B. Köln oder 51107">
                         </div>
-                        <button type="submit" id="submit-btn" class="w-full bg-brand-green text-white py-3 rounded-lg font-bold text-lg shadow-md btn-hover mt-4">
-                            Kostenlose Anfrage senden
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Zauntyp (optional)</label>
+                            <select name="zauntyp" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-green outline-none bg-white text-gray-700">
+                                <option value="">Bitte wählen...</option>
+                                <option>Doppelstabmattenzaun</option>
+                                <option>Sichtschutzzaun</option>
+                                <option>Design- / Schmuckzaun</option>
+                                <option>Tor / Einfahrtstor</option>
+                                <option>Noch nicht sicher</option>
+                            </select>
+                        </div>
+                        <button type="submit" id="submit-btn" class="w-full bg-brand-green text-white py-4 rounded-lg font-bold text-lg shadow-md btn-hover mt-2">
+                            <i class="fas fa-paper-plane mr-2"></i> Kostenlose Anfrage senden
                         </button>
                         <div id="form-success" class="hidden bg-green-50 border border-green-300 text-green-800 rounded-lg p-4 text-center">
-                            <i class="fas fa-check-circle mr-2"></i> Vielen Dank! Wir melden uns bald bei Ihnen.
+                            <i class="fas fa-check-circle mr-2"></i> Vielen Dank! Wir melden uns innerhalb von 24h bei Ihnen.
                         </div>
                         <div id="form-error" class="hidden bg-red-50 border border-red-300 text-red-800 rounded-lg p-4 text-center">
-                            <i class="fas fa-exclamation-circle mr-2"></i> Fehler beim Senden. Bitte versuchen Sie es erneut.
+                            <i class="fas fa-exclamation-circle mr-2"></i> Fehler beim Senden. Bitte rufen Sie uns direkt an.
                         </div>
                         <p class="text-[10px] text-gray-400 mt-2 text-center">
-                            Mit Absenden des Formulars akzeptieren Sie unsere Datenschutzerklärung.
+                            Mit Absenden des Formulars akzeptieren Sie unsere <a href="datenschutz.html" class="underline">Datenschutzerklärung</a>.
                         </p>
                     </form>
                 </div>
@@ -154,21 +551,262 @@
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer class="bg-gray-900 text-gray-400 py-12">
         <div class="container mx-auto px-4 text-center">
-            <div class="mb-8">
-                <span class="text-2xl font-bold text-white">Heckenservice<span class="text-brand-green">.de</span></span>
+            <div class="mb-6">
+                <span class="text-2xl font-bold text-white">Zaunservice<span class="text-brand-green">-NRW</span></span>
+                <p class="text-sm mt-2 text-gray-500">Ihr Zaunbau-Profi in Nordrhein-Westfalen</p>
             </div>
-            <div class="flex flex-wrap justify-center space-x-6 mb-8">
+            <div class="flex flex-wrap justify-center gap-6 mb-6 text-sm">
+                <a href="#leistungen" class="hover:text-white">Leistungen</a>
+                <a href="#galerie" class="hover:text-white">Galerie</a>
+                <a href="#ablauf" class="hover:text-white">Ablauf</a>
+                <a href="#faq" class="hover:text-white">FAQ</a>
                 <a href="impressum.html" class="hover:text-white">Impressum</a>
-                <a href="#" class="hover:text-white">Datenschutz</a>
-                <a href="#" class="hover:text-white">AGB</a>
+                <a href="datenschutz.html" class="hover:text-white">Datenschutz</a>
+                <a href="agb.html" class="hover:text-white">AGB</a>
             </div>
-            <p>&copy; 2026 Heckenservice. Alle Rechte vorbehalten.</p>
+            <p class="text-xs">&copy; 2026 Zaunservice-NRW. Alle Rechte vorbehalten.</p>
         </div>
     </footer>
 
+    <!-- WHATSAPP BUTTON -->
+    <a href="https://wa.me/4915753326213?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20einen%20neuen%20Zaun%20in%20NRW.%20K%C3%B6nnen%20Sie%20mir%20ein%20Angebot%20machen%3F"
+       target="_blank" rel="noopener" class="whatsapp-fab" aria-label="WhatsApp schreiben">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- EXIT INTENT POPUP -->
+    <div id="exit-overlay" role="dialog" aria-modal="true">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 relative">
+            <button id="exit-close" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 text-2xl leading-none">&times;</button>
+            <div class="text-center mb-6">
+                <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-tag text-3xl text-brand-green"></i>
+                </div>
+                <h3 class="text-2xl font-extrabold text-gray-900 mb-2">Warten Sie kurz!</h3>
+                <p class="text-gray-600 text-sm">Sichern Sie sich jetzt Ihr <strong>kostenloses Angebot</strong> — wir melden uns innerhalb von 24h.</p>
+            </div>
+            <form id="exit-form" action="https://formspree.io/f/mjgedpdo" method="POST" class="space-y-3">
+                <input type="hidden" name="_subject" value="Anfrage via Exit-Intent Popup">
+                <input type="text" name="name" required placeholder="Ihr Name" class="w-full px-4 py-3 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-brand-green">
+                <input type="tel" name="telefon" required placeholder="Ihre Telefonnummer" class="w-full px-4 py-3 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-brand-green">
+                <button type="submit" id="exit-submit" class="w-full bg-brand-green text-white py-3 rounded-lg font-bold text-lg btn-hover">
+                    <i class="fas fa-paper-plane mr-2"></i> Jetzt kostenlos anfragen
+                </button>
+                <div id="exit-success" class="hidden bg-green-50 border border-green-300 text-green-800 rounded-lg p-3 text-center text-sm">
+                    <i class="fas fa-check-circle mr-1"></i> Danke! Wir melden uns bald.
+                </div>
+            </form>
+            <p class="text-[10px] text-gray-400 mt-3 text-center">Kostenlos & unverbindlich. Kein Spam.</p>
+        </div>
+    </div>
+
+    <!-- COOKIE BANNER -->
+    <div id="cookie-banner">
+        <p class="text-sm text-gray-300 flex-1">
+            Diese Website lädt externe Ressourcen (Schriften, Icons) von Drittanbietern. Durch die Nutzung stimmen Sie der Verwendung zu.
+            <a href="datenschutz.html" class="underline text-gray-400 hover:text-white ml-1">Datenschutz</a>
+        </p>
+        <div class="flex gap-3 flex-shrink-0">
+            <button id="cookie-accept" class="bg-brand-green text-white px-5 py-2 rounded-lg font-bold text-sm btn-hover">Akzeptieren</button>
+            <button id="cookie-decline" class="border border-gray-600 text-gray-400 px-5 py-2 rounded-lg text-sm hover:border-gray-400">Ablehnen</button>
+        </div>
+    </div>
+
+    <!-- MOBILER STICKY CTA -->
+    <div class="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-white border-t border-gray-200 p-3 flex gap-3 shadow-2xl">
+        <a href="tel:+4915753326213" class="flex-1 bg-brand-green text-white text-center py-3 rounded-lg font-bold flex items-center justify-center gap-2">
+            <i class="fas fa-phone-alt"></i> Anrufen
+        </a>
+        <a href="#kontakt" class="flex-1 border-2 border-brand-green text-brand-green text-center py-3 rounded-lg font-bold flex items-center justify-center gap-2">
+            <i class="fas fa-clipboard-list"></i> Anfrage
+        </a>
+    </div>
+
+    <!-- Structured Data: LocalBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HomeAndConstructionBusiness",
+      "@id": "https://zaunservice-nrw.de/",
+      "name": "Zaunservice-NRW",
+      "description": "Professioneller Zaunbau und Zaunmontage in Nordrhein-Westfalen. Kostenloses Aufmaß, Festpreisgarantie und Komplettmontage.",
+      "url": "https://zaunservice-nrw.de",
+      "telephone": "+4915753326213",
+      "email": "kontakt@heckenservice.de",
+      "foundingDate": "2024-09",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Ibsenstr.",
+        "addressLocality": "Köln",
+        "postalCode": "51107",
+        "addressRegion": "Nordrhein-Westfalen",
+        "addressCountry": "DE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 50.9333,
+        "longitude": 7.0333
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Köln" },
+        { "@type": "City", "name": "Düsseldorf" },
+        { "@type": "City", "name": "Bonn" },
+        { "@type": "City", "name": "Leverkusen" },
+        { "@type": "City", "name": "Bergisch Gladbach" },
+        { "@type": "AdministrativeArea", "name": "Rhein-Erft-Kreis" },
+        { "@type": "AdministrativeArea", "name": "Rheinisch-Bergischer Kreis" },
+        { "@type": "State", "name": "Nordrhein-Westfalen" }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+          "opens": "07:00",
+          "closes": "20:00"
+        }
+      ],
+      "priceRange": "$$",
+      "image": "https://zaunservice-nrw.de/img/fence_clean.png",
+      "sameAs": ["https://www.instagram.com/heckenservice.de"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Zaunbau-Leistungen NRW",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Doppelstabmattenzaun montieren NRW" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sichtschutzzaun NRW" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Design- und Schmuckzaun NRW" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Einfahrtstor montieren NRW" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kostenloses Aufmaß NRW" } }
+        ]
+      }
+    }
+    </script>
+
+    <!-- Structured Data: FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Ist das Aufmaß wirklich kostenlos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja, absolut. Wir kommen zu Ihnen nach Hause, messen das Grundstück aus und beraten Sie — komplett kostenlos und unverbindlich. Das gilt für alle Städte in NRW."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie schnell kann ein Termin vereinbart werden?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Wir melden uns innerhalb von 24 Stunden nach Ihrer Anfrage. Termine sind in der Regel innerhalb weniger Tage möglich — je nach Region in NRW."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was bedeutet Festpreisgarantie?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Der im Angebot genannte Preis ist verbindlich — keine versteckten Kosten, keine Nachforderungen. Was wir vereinbaren, das zahlen Sie."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "In welchen Städten arbeiten Sie?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Wir sind im gesamten Nordrhein-Westfalen tätig — schwerpunktmäßig Köln, Bonn, Leverkusen, Düsseldorf, Bergisch Gladbach, Rhein-Erft-Kreis und Rheinisch-Bergischer Kreis."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Welche Zauntypen montieren Sie?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Doppelstabmatten, Sichtschutzzäune, Design- und Schmuckzäune sowie Tore und Gartentüren. Wir beraten Sie bei der Auswahl des richtigen Zauns für Ihr Grundstück."
+          }
+        }
+      ]
+    }
+    </script>
+
     <script>
+        /* ── Cookie Banner ── */
+        const cookieBanner = document.getElementById('cookie-banner');
+        if (localStorage.getItem('cookieConsent')) {
+            cookieBanner.classList.add('hidden');
+        }
+        document.getElementById('cookie-accept').addEventListener('click', () => {
+            localStorage.setItem('cookieConsent', 'accepted');
+            cookieBanner.classList.add('hidden');
+        });
+        document.getElementById('cookie-decline').addEventListener('click', () => {
+            localStorage.setItem('cookieConsent', 'declined');
+            cookieBanner.classList.add('hidden');
+        });
+
+        /* ── Exit Intent Popup ── */
+        const exitOverlay = document.getElementById('exit-overlay');
+        let exitShown = sessionStorage.getItem('exitShown');
+
+        if (!exitShown) {
+            document.addEventListener('mouseleave', function(e) {
+                if (e.clientY <= 10 && !exitShown) {
+                    exitShown = true;
+                    sessionStorage.setItem('exitShown', '1');
+                    exitOverlay.classList.add('active');
+                }
+            });
+            // На мобильном — показать после 40 секунд
+            setTimeout(() => {
+                if (!exitShown) {
+                    exitShown = true;
+                    sessionStorage.setItem('exitShown', '1');
+                    exitOverlay.classList.add('active');
+                }
+            }, 40000);
+        }
+
+        document.getElementById('exit-close').addEventListener('click', () => {
+            exitOverlay.classList.remove('active');
+        });
+        exitOverlay.addEventListener('click', (e) => {
+            if (e.target === exitOverlay) exitOverlay.classList.remove('active');
+        });
+
+        // Отправка формы в попапе
+        const exitForm = document.getElementById('exit-form');
+        const exitSubmit = document.getElementById('exit-submit');
+        const exitSuccess = document.getElementById('exit-success');
+
+        exitForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            exitSubmit.disabled = true;
+            exitSubmit.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Wird gesendet...';
+            try {
+                const res = await fetch(exitForm.action, {
+                    method: 'POST',
+                    body: new FormData(exitForm),
+                    headers: { 'Accept': 'application/json' }
+                });
+                if (res.ok) {
+                    exitForm.reset();
+                    exitSubmit.classList.add('hidden');
+                    exitSuccess.classList.remove('hidden');
+                    setTimeout(() => exitOverlay.classList.remove('active'), 2500);
+                } else { throw new Error(); }
+            } catch {
+                exitSubmit.disabled = false;
+                exitSubmit.innerHTML = '<i class="fas fa-paper-plane mr-2"></i> Jetzt kostenlos anfragen';
+            }
+        });
+
+        /* ── Основная форма ── */
         const form = document.getElementById('contact-form');
         const submitBtn = document.getElementById('submit-btn');
         const successMsg = document.getElementById('form-success');
@@ -177,7 +815,7 @@
         form.addEventListener('submit', async function(e) {
             e.preventDefault();
             submitBtn.disabled = true;
-            submitBtn.textContent = 'Wird gesendet...';
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Wird gesendet...';
 
             try {
                 const response = await fetch(form.action, {
@@ -195,7 +833,7 @@
                 }
             } catch {
                 submitBtn.disabled = false;
-                submitBtn.textContent = 'Kostenlose Anfrage senden';
+                submitBtn.innerHTML = '<i class="fas fa-paper-plane mr-2"></i> Kostenlose Anfrage senden';
                 errorMsg.classList.remove('hidden');
             }
         });
