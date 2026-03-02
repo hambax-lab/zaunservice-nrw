@@ -3,13 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-TXPH8QKK');</script>
-    <!-- End Google Tag Manager -->
     <title>Zaunbau & Montage in Köln, NRW | Kostenlos Aufmaß | Zaunservice-NRW</title>
 
     <!-- SEO Meta -->
@@ -113,11 +106,6 @@
     </style>
 </head>
 <body class="font-sans text-gray-800 bg-white">
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TXPH8QKK"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
     <!-- HEADER -->
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
@@ -747,18 +735,39 @@
     </script>
 
     <script>
+        /* ── GTM — загружается ТОЛЬКО при согласии ── */
+        function loadGTM() {
+            (function(w,d,s,l,i){
+                w[l]=w[l]||[];
+                w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+                var f=d.getElementsByTagName(s)[0],
+                    j=d.createElement(s),
+                    dl=l!='dataLayer'?'&l='+l:'';
+                j.async=true;
+                j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+                f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-TXPH8QKK');
+        }
+
         /* ── Cookie Banner ── */
         const cookieBanner = document.getElementById('cookie-banner');
-        if (localStorage.getItem('cookieConsent')) {
+        const consent = localStorage.getItem('cookieConsent');
+
+        if (consent) {
             cookieBanner.classList.add('hidden');
+            if (consent === 'accepted') loadGTM(); // уже согласился ранее
         }
+
         document.getElementById('cookie-accept').addEventListener('click', () => {
             localStorage.setItem('cookieConsent', 'accepted');
             cookieBanner.classList.add('hidden');
+            loadGTM(); // загружаем GTM только сейчас
         });
+
         document.getElementById('cookie-decline').addEventListener('click', () => {
             localStorage.setItem('cookieConsent', 'declined');
             cookieBanner.classList.add('hidden');
+            // GTM НЕ загружается
         });
 
         /* ── Exit Intent Popup ── */
