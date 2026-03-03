@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danke für Ihre Anfrage | Zaunservice-NRW</title>
+    <meta name="robots" content="noindex, nofollow">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root { --brand-green: #2d7a3a; }
+        .bg-brand-green { background-color: var(--brand-green); }
+        .text-brand-green { color: var(--brand-green); }
+        .btn-hover:hover { filter: brightness(1.1); transition: 0.3s; }
+
+        @keyframes pop-in {
+            0%   { transform: scale(0.5); opacity: 0; }
+            80%  { transform: scale(1.1); }
+            100% { transform: scale(1);   opacity: 1; }
+        }
+        .pop-in { animation: pop-in 0.5s ease forwards; }
+    </style>
+
+    <!-- GA4 — конверсия на странице /danke -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        if (localStorage.getItem('cookieConsent') === 'accepted') {
+            var s = document.createElement('script');
+            s.async = true;
+            s.src = 'https://www.googletagmanager.com/gtag/js?id=G-8W8NEK15Z6';
+            document.head.appendChild(s);
+            gtag('js', new Date());
+            gtag('config', 'G-8W8NEK15Z6');
+            // Событие конверсии
+            gtag('event', 'conversion', { 'send_to': 'G-8W8NEK15Z6' });
+        }
+    </script>
+</head>
+<body class="font-sans bg-gray-50 min-h-screen flex flex-col">
+
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="bg-brand-green p-2 rounded">
+                    <i class="fas fa-fence text-white"></i>
+                </div>
+                <a href="index.html" class="text-xl font-bold tracking-tight">Zaunservice<span class="text-brand-green">-NRW</span></a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-1 flex items-center justify-center py-20 px-4">
+        <div class="text-center max-w-lg">
+
+            <div class="bg-green-100 w-28 h-28 rounded-full flex items-center justify-center mx-auto mb-8 pop-in">
+                <i class="fas fa-check text-5xl text-brand-green"></i>
+            </div>
+
+            <h1 class="text-4xl font-extrabold text-gray-900 mb-4">Vielen Dank!</h1>
+            <p class="text-xl text-gray-600 mb-4">Ihre Anfrage ist bei uns eingegangen.</p>
+            <p class="text-gray-500 mb-10">Wir melden uns <strong>innerhalb von 24 Stunden</strong> bei Ihnen für einen kostenlosen Vor-Ort-Termin in NRW.</p>
+
+            <div class="bg-white rounded-2xl shadow-sm p-8 mb-10 text-left space-y-4">
+                <div class="flex items-center gap-4">
+                    <div class="bg-green-100 w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-phone text-brand-green"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-500">Sie können uns auch direkt anrufen</p>
+                        <a href="tel:+4915753326213" class="font-bold text-brand-green text-lg hover:underline">+49 1575 3326 213</a>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="bg-green-100 w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0">
+                        <i class="fab fa-whatsapp text-brand-green"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-500">Oder schreiben Sie uns auf WhatsApp</p>
+                        <a href="https://wa.me/4915753326213" target="_blank" class="font-bold text-brand-green hover:underline">WhatsApp öffnen</a>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="bg-green-100 w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-clock text-brand-green"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-500">Erreichbar</p>
+                        <p class="font-bold text-gray-800">Mo–So, 07:00–20:00 Uhr</p>
+                    </div>
+                </div>
+            </div>
+
+            <a href="index.html" class="bg-brand-green text-white px-8 py-4 rounded-lg font-bold btn-hover inline-block">
+                <i class="fas fa-arrow-left mr-2"></i> Zurück zur Startseite
+            </a>
+        </div>
+    </main>
+
+    <footer class="bg-gray-900 text-gray-400 py-6 text-center text-xs">
+        <p>&copy; 2026 Zaunservice-NRW. Alle Rechte vorbehalten.</p>
+    </footer>
+
+</body>
+</html>
